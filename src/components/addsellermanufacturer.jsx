@@ -34,7 +34,7 @@ const handleSubmit = async (e) => {
 
     const contract = new web3.eth.Contract(
       SellerRegistry.abi,
-      '0xE0dE17bf535dA65B22bE02f7Ed9f350C39DE5863' //DEPLOYED ADDRESS HERE
+      '0x522Fa3669C410c25A81Cc11226FA49EaC3515367' //DEPLOYED SellerRegistry contract address
     );
 
     const {

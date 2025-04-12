@@ -1,5 +1,8 @@
 import { Html5QrcodeScanner } from "html5-qrcode";
+import Web3 from "web3";
 import React, { useState, useEffect, useRef } from "react";
+import SaleRegistry from '../contracts/ProductSaleRegistry.json';
+import ProductRegistry from '../contracts/ProductRegistry.json';
 import "../styles/SellerPortal.css";
 
 const SellerPortal = () => {
@@ -12,40 +15,32 @@ const SellerPortal = () => {
   useEffect(() => {
     if (cameraActive) {
       if (!scannerRef.current) {
-        scannerRef.current = new Html5QrcodeScanner("qr-reader", {
-          fps: 10,
-          qrbox: 250,
-        });
-
+        scannerRef.current = new Html5QrcodeScanner("qr-reader", { fps: 10, qrbox: 250 });
         scannerRef.current.render(
           (decodedText) => {
             try {
               const parsedData = JSON.parse(decodedText);
               if (parsedData.productSN) {
-                setProductSN(parsedData.productSN); // Extract only productSN
+                setProductSN(parsedData.productSN);
               } else {
                 console.error("QR Code does not contain productSN");
               }
             } catch (error) {
               console.error("Invalid QR Code format", error);
             }
-
-            // Stop scanning after success
             scannerRef.current.clear().then(() => {
               scannerRef.current = null;
               setCameraActive(false);
-            }).catch((err) => console.error("Cleanup error:", err));
+            }).catch(err => console.error("Cleanup error:", err));
           },
-          (error) => {
-            console.error("QR Scanner Error:", error);
-          }
+          (error) => console.error("QR Scanner Error:", error)
         );
       }
     } else {
       if (scannerRef.current) {
         scannerRef.current.clear().then(() => {
           scannerRef.current = null;
-        }).catch((err) => console.error("Cleanup error:", err));
+        }).catch(err => console.error("Cleanup error:", err));
       }
     }
 
@@ -53,16 +48,58 @@ const SellerPortal = () => {
       if (scannerRef.current) {
         scannerRef.current.clear().then(() => {
           scannerRef.current = null;
-        }).catch((err) => console.error("Cleanup error:", err));
+        }).catch(err => console.error("Cleanup error:", err));
       }
     };
   }, [cameraActive]);
 
   const toggleMenu = () => setIsMenuActive(!isMenuActive);
-  const toggleCamera = () => setCameraActive((prev) => !prev);
-  const handleSubmit = (e) => {
+  const toggleCamera = () => setCameraActive(prev => !prev);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted with:", { productSN, consumerCode });
+    try {
+      const web3 = new Web3(window.ethereum);
+      await window.ethereum.request({ method: "eth_requestAccounts" });
+      const accounts = await web3.eth.getAccounts();
+
+      const productContract = new web3.eth.Contract(
+        ProductRegistry.abi,
+        '0x392602A14d90Abdedd93cd1a18892f7F5A466674' // Your ProductRegistry address
+      );
+
+      const saleContract = new web3.eth.Contract(
+        SaleRegistry.abi,
+        '0x5B826c60F90110D58665d57Eb6C7DE44323385Be' // Replace with ProductSaleRegistry address
+      );
+
+      // Check if product exists
+      const productData = await productContract.methods.getProduct(productSN).call();
+      if (!productData || productData[2] === "") {
+        alert("❌ Product Serial Number does not exist on the blockchain.");
+        return;
+      }
+
+      // Check if sale already exists
+      const exists = await saleContract.methods.saleExists(productSN).call();
+      if (exists) {
+        alert("❌ Sale for this product has already been recorded.");
+        return;
+      }
+
+      // Record the sale
+      await saleContract.methods
+        .recordSale(productSN, consumerCode)
+        .send({ from: accounts[0] });
+
+      alert("✅ Product sale recorded on blockchain!");
+      setProductSN("");
+      setConsumerCode("");
+
+    } catch (error) {
+      console.error("❌ Transaction Error:", error);
+      alert("Error: " + (error?.message || "Unexpected blockchain error."));
+    }
   };
 
   return (
@@ -77,9 +114,7 @@ const SellerPortal = () => {
             <a href="/consumer">Consumer</a>
           </div>
           <div className="hamburger" onClick={toggleMenu}>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div></div><div></div><div></div>
           </div>
         </div>
       </nav>
@@ -87,7 +122,6 @@ const SellerPortal = () => {
       <div className="container">
         <h2>Complete Product Sale</h2>
         <div className="transaction-interface">
-          {/* QR Code Scanner */}
           <div className="camera-preview">
             {cameraActive ? <div id="qr-reader" style={{ width: "100%" }}></div> : <p>Camera is turned off</p>}
             <button type="button" className="camera-toggle-btn" onClick={toggleCamera}>
@@ -95,7 +129,6 @@ const SellerPortal = () => {
             </button>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit}>
             <div className="input-group">
               <div className="input-wrapper">
