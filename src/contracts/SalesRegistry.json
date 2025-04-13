@@ -8983,15 +8983,15 @@
     "absolutePath": "project:/contracts/SalesRegistry.sol",
     "exportedSymbols": {
       "SalesRegistry": [
-        394
+        481
       ]
     },
-    "id": 395,
+    "id": 482,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 265,
+        "id": 352,
         "literals": [
           "solidity",
           "^",
@@ -9008,9 +9008,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 394,
+        "id": 481,
         "linearizedBaseContracts": [
-          394
+          481
         ],
         "name": "SalesRegistry",
         "nameLocation": "69:13:2",
@@ -9018,16 +9018,16 @@
         "nodes": [
           {
             "canonicalName": "SalesRegistry.Sale",
-            "id": 270,
+            "id": 357,
             "members": [
               {
                 "constant": false,
-                "id": 267,
+                "id": 354,
                 "mutability": "mutable",
                 "name": "sellerCode",
                 "nameLocation": "120:10:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 270,
+                "scope": 357,
                 "src": "113:17:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9036,7 +9036,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 266,
+                  "id": 353,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "113:6:2",
@@ -9049,12 +9049,12 @@
               },
               {
                 "constant": false,
-                "id": 269,
+                "id": 356,
                 "mutability": "mutable",
                 "name": "productSN",
                 "nameLocation": "148:9:2",
                 "nodeType": "VariableDeclaration",
-                "scope": 270,
+                "scope": 357,
                 "src": "141:16:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9063,7 +9063,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 268,
+                  "id": 355,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "141:6:2",
@@ -9078,52 +9078,52 @@
             "name": "Sale",
             "nameLocation": "97:4:2",
             "nodeType": "StructDefinition",
-            "scope": 394,
+            "scope": 481,
             "src": "90:75:2",
             "visibility": "public"
           },
           {
             "constant": false,
             "functionSelector": "b5f522f7",
-            "id": 274,
+            "id": 361,
             "mutability": "mutable",
             "name": "sales",
             "nameLocation": "187:5:2",
             "nodeType": "VariableDeclaration",
-            "scope": 394,
+            "scope": 481,
             "src": "173:19:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Sale_$270_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Sale_$357_storage_$dyn_storage",
               "typeString": "struct SalesRegistry.Sale[]"
             },
             "typeName": {
               "baseType": {
-                "id": 272,
+                "id": 359,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 271,
+                  "id": 358,
                   "name": "Sale",
                   "nameLocations": [
                     "173:4:2"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 270,
+                  "referencedDeclaration": 357,
                   "src": "173:4:2"
                 },
-                "referencedDeclaration": 270,
+                "referencedDeclaration": 357,
                 "src": "173:4:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Sale_$270_storage_ptr",
+                  "typeIdentifier": "t_struct$_Sale_$357_storage_ptr",
                   "typeString": "struct SalesRegistry.Sale"
                 }
               },
-              "id": 273,
+              "id": 360,
               "nodeType": "ArrayTypeName",
               "src": "173:6:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Sale_$270_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Sale_$357_storage_$dyn_storage_ptr",
                 "typeString": "struct SalesRegistry.Sale[]"
               }
             },
@@ -9131,7 +9131,7 @@
           },
           {
             "body": {
-              "id": 290,
+              "id": 377,
               "nodeType": "Block",
               "src": "281:60:2",
               "statements": [
@@ -9141,11 +9141,11 @@
                       {
                         "arguments": [
                           {
-                            "id": 285,
+                            "id": 372,
                             "name": "_sellerCode",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 276,
+                            "referencedDeclaration": 363,
                             "src": "308:11:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
@@ -9153,11 +9153,11 @@
                             }
                           },
                           {
-                            "id": 286,
+                            "id": 373,
                             "name": "_productSN",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 278,
+                            "referencedDeclaration": 365,
                             "src": "321:10:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
@@ -9176,18 +9176,18 @@
                               "typeString": "string memory"
                             }
                           ],
-                          "id": 284,
+                          "id": 371,
                           "name": "Sale",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 270,
+                          "referencedDeclaration": 357,
                           "src": "303:4:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_struct$_Sale_$270_storage_ptr_$",
+                            "typeIdentifier": "t_type$_t_struct$_Sale_$357_storage_ptr_$",
                             "typeString": "type(struct SalesRegistry.Sale storage pointer)"
                           }
                         },
-                        "id": 287,
+                        "id": 374,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -9199,7 +9199,7 @@
                         "src": "303:29:2",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Sale_$270_memory_ptr",
+                          "typeIdentifier": "t_struct$_Sale_$357_memory_ptr",
                           "typeString": "struct SalesRegistry.Sale memory"
                         }
                       }
@@ -9207,23 +9207,23 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_Sale_$270_memory_ptr",
+                          "typeIdentifier": "t_struct$_Sale_$357_memory_ptr",
                           "typeString": "struct SalesRegistry.Sale memory"
                         }
                       ],
                       "expression": {
-                        "id": 281,
+                        "id": 368,
                         "name": "sales",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 274,
+                        "referencedDeclaration": 361,
                         "src": "292:5:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Sale_$270_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Sale_$357_storage_$dyn_storage",
                           "typeString": "struct SalesRegistry.Sale storage ref[] storage ref"
                         }
                       },
-                      "id": 283,
+                      "id": 370,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -9233,11 +9233,11 @@
                       "nodeType": "MemberAccess",
                       "src": "292:10:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Sale_$270_storage_$dyn_storage_ptr_$_t_struct$_Sale_$270_storage_$returns$__$attached_to$_t_array$_t_struct$_Sale_$270_storage_$dyn_storage_ptr_$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Sale_$357_storage_$dyn_storage_ptr_$_t_struct$_Sale_$357_storage_$returns$__$attached_to$_t_array$_t_struct$_Sale_$357_storage_$dyn_storage_ptr_$",
                         "typeString": "function (struct SalesRegistry.Sale storage ref[] storage pointer,struct SalesRegistry.Sale storage ref)"
                       }
                     },
-                    "id": 288,
+                    "id": 375,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9253,14 +9253,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 289,
+                  "id": 376,
                   "nodeType": "ExpressionStatement",
                   "src": "292:41:2"
                 }
               ]
             },
             "functionSelector": "0a8bd6d0",
-            "id": 291,
+            "id": 378,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9268,17 +9268,17 @@
             "nameLocation": "210:10:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 279,
+              "id": 366,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 276,
+                  "id": 363,
                   "mutability": "mutable",
                   "name": "_sellerCode",
                   "nameLocation": "235:11:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 291,
+                  "scope": 378,
                   "src": "221:25:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -9287,7 +9287,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 275,
+                    "id": 362,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "221:6:2",
@@ -9300,12 +9300,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 278,
+                  "id": 365,
                   "mutability": "mutable",
                   "name": "_productSN",
                   "nameLocation": "262:10:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 291,
+                  "scope": 378,
                   "src": "248:24:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -9314,7 +9314,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 277,
+                    "id": 364,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "248:6:2",
@@ -9329,12 +9329,12 @@
               "src": "220:53:2"
             },
             "returnParameters": {
-              "id": 280,
+              "id": 367,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "281:0:2"
             },
-            "scope": 394,
+            "scope": 481,
             "src": "201:140:2",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -9342,7 +9342,7 @@
           },
           {
             "body": {
-              "id": 321,
+              "id": 408,
               "nodeType": "Block",
               "src": "429:154:2",
               "statements": [
@@ -9354,17 +9354,17 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 304,
+                        "id": 391,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 301,
+                          "id": 388,
                           "name": "index",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 293,
+                          "referencedDeclaration": 380,
                           "src": "448:5:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -9375,18 +9375,18 @@
                         "operator": "<",
                         "rightExpression": {
                           "expression": {
-                            "id": 302,
+                            "id": 389,
                             "name": "sales",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 274,
+                            "referencedDeclaration": 361,
                             "src": "456:5:2",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Sale_$270_storage_$dyn_storage",
+                              "typeIdentifier": "t_array$_t_struct$_Sale_$357_storage_$dyn_storage",
                               "typeString": "struct SalesRegistry.Sale storage ref[] storage ref"
                             }
                           },
-                          "id": 303,
+                          "id": 390,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -9408,7 +9408,7 @@
                       },
                       {
                         "hexValue": "496e76616c69642073616c6520696e646578",
-                        "id": 305,
+                        "id": 392,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -9434,7 +9434,7 @@
                           "typeString": "literal_string \"Invalid sale index\""
                         }
                       ],
-                      "id": 300,
+                      "id": 387,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -9448,7 +9448,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 306,
+                    "id": 393,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9464,74 +9464,74 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 307,
+                  "id": 394,
                   "nodeType": "ExpressionStatement",
                   "src": "440:51:2"
                 },
                 {
                   "assignments": [
-                    310
+                    397
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 310,
+                      "id": 397,
                       "mutability": "mutable",
                       "name": "s",
                       "nameLocation": "514:1:2",
                       "nodeType": "VariableDeclaration",
-                      "scope": 321,
+                      "scope": 408,
                       "src": "502:13:2",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Sale_$270_memory_ptr",
+                        "typeIdentifier": "t_struct$_Sale_$357_memory_ptr",
                         "typeString": "struct SalesRegistry.Sale"
                       },
                       "typeName": {
-                        "id": 309,
+                        "id": 396,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 308,
+                          "id": 395,
                           "name": "Sale",
                           "nameLocations": [
                             "502:4:2"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 270,
+                          "referencedDeclaration": 357,
                           "src": "502:4:2"
                         },
-                        "referencedDeclaration": 270,
+                        "referencedDeclaration": 357,
                         "src": "502:4:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Sale_$270_storage_ptr",
+                          "typeIdentifier": "t_struct$_Sale_$357_storage_ptr",
                           "typeString": "struct SalesRegistry.Sale"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 314,
+                  "id": 401,
                   "initialValue": {
                     "baseExpression": {
-                      "id": 311,
+                      "id": 398,
                       "name": "sales",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 274,
+                      "referencedDeclaration": 361,
                       "src": "518:5:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Sale_$270_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Sale_$357_storage_$dyn_storage",
                         "typeString": "struct SalesRegistry.Sale storage ref[] storage ref"
                       }
                     },
-                    "id": 313,
+                    "id": 400,
                     "indexExpression": {
-                      "id": 312,
+                      "id": 399,
                       "name": "index",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 293,
+                      "referencedDeclaration": 380,
                       "src": "524:5:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -9545,7 +9545,7 @@
                     "nodeType": "IndexAccess",
                     "src": "518:12:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Sale_$270_storage",
+                      "typeIdentifier": "t_struct$_Sale_$357_storage",
                       "typeString": "struct SalesRegistry.Sale storage ref"
                     }
                   },
@@ -9557,18 +9557,18 @@
                     "components": [
                       {
                         "expression": {
-                          "id": 315,
+                          "id": 402,
                           "name": "s",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 310,
+                          "referencedDeclaration": 397,
                           "src": "549:1:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Sale_$270_memory_ptr",
+                            "typeIdentifier": "t_struct$_Sale_$357_memory_ptr",
                             "typeString": "struct SalesRegistry.Sale memory"
                           }
                         },
-                        "id": 316,
+                        "id": 403,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
@@ -9576,7 +9576,7 @@
                         "memberLocation": "551:10:2",
                         "memberName": "sellerCode",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 267,
+                        "referencedDeclaration": 354,
                         "src": "549:12:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -9585,18 +9585,18 @@
                       },
                       {
                         "expression": {
-                          "id": 317,
+                          "id": 404,
                           "name": "s",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 310,
+                          "referencedDeclaration": 397,
                           "src": "563:1:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Sale_$270_memory_ptr",
+                            "typeIdentifier": "t_struct$_Sale_$357_memory_ptr",
                             "typeString": "struct SalesRegistry.Sale memory"
                           }
                         },
-                        "id": 318,
+                        "id": 405,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
@@ -9604,7 +9604,7 @@
                         "memberLocation": "565:9:2",
                         "memberName": "productSN",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 269,
+                        "referencedDeclaration": 356,
                         "src": "563:11:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -9612,7 +9612,7 @@
                         }
                       }
                     ],
-                    "id": 319,
+                    "id": 406,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -9625,15 +9625,15 @@
                       "typeString": "tuple(string memory,string memory)"
                     }
                   },
-                  "functionReturnParameters": 299,
-                  "id": 320,
+                  "functionReturnParameters": 386,
+                  "id": 407,
                   "nodeType": "Return",
                   "src": "541:34:2"
                 }
               ]
             },
             "functionSelector": "d8f6d596",
-            "id": 322,
+            "id": 409,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9641,17 +9641,17 @@
             "nameLocation": "358:7:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 294,
+              "id": 381,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 293,
+                  "id": 380,
                   "mutability": "mutable",
                   "name": "index",
                   "nameLocation": "371:5:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 322,
+                  "scope": 409,
                   "src": "366:10:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9660,7 +9660,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 292,
+                    "id": 379,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "366:4:2",
@@ -9675,17 +9675,17 @@
               "src": "365:12:2"
             },
             "returnParameters": {
-              "id": 299,
+              "id": 386,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 296,
+                  "id": 383,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 322,
+                  "scope": 409,
                   "src": "399:13:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -9694,7 +9694,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 295,
+                    "id": 382,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "399:6:2",
@@ -9707,12 +9707,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 298,
+                  "id": 385,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 322,
+                  "scope": 409,
                   "src": "414:13:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -9721,7 +9721,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 297,
+                    "id": 384,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "414:6:2",
@@ -9735,7 +9735,7 @@
               ],
               "src": "398:30:2"
             },
-            "scope": 394,
+            "scope": 481,
             "src": "349:234:2",
             "stateMutability": "view",
             "virtual": false,
@@ -9743,25 +9743,25 @@
           },
           {
             "body": {
-              "id": 330,
+              "id": 417,
               "nodeType": "Block",
               "src": "643:38:2",
               "statements": [
                 {
                   "expression": {
                     "expression": {
-                      "id": 327,
+                      "id": 414,
                       "name": "sales",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 274,
+                      "referencedDeclaration": 361,
                       "src": "661:5:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_Sale_$270_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_Sale_$357_storage_$dyn_storage",
                         "typeString": "struct SalesRegistry.Sale storage ref[] storage ref"
                       }
                     },
-                    "id": 328,
+                    "id": 415,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9775,15 +9775,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 326,
-                  "id": 329,
+                  "functionReturnParameters": 413,
+                  "id": 416,
                   "nodeType": "Return",
                   "src": "654:19:2"
                 }
               ]
             },
             "functionSelector": "dd8027db",
-            "id": 331,
+            "id": 418,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9791,23 +9791,23 @@
             "nameLocation": "600:13:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 323,
+              "id": 410,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "613:2:2"
             },
             "returnParameters": {
-              "id": 326,
+              "id": 413,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 325,
+                  "id": 412,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 331,
+                  "scope": 418,
                   "src": "637:4:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9816,7 +9816,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 324,
+                    "id": 411,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "637:4:2",
@@ -9830,7 +9830,7 @@
               ],
               "src": "636:6:2"
             },
-            "scope": 394,
+            "scope": 481,
             "src": "591:90:2",
             "stateMutability": "view",
             "virtual": false,
@@ -9838,13 +9838,13 @@
           },
           {
             "body": {
-              "id": 392,
+              "id": 479,
               "nodeType": "Block",
               "src": "861:350:2",
               "statements": [
                 {
                   "body": {
-                    "id": 388,
+                    "id": 475,
                     "nodeType": "Block",
                     "src": "912:269:2",
                     "statements": [
@@ -9854,7 +9854,7 @@
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           },
-                          "id": 383,
+                          "id": 470,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -9864,7 +9864,7 @@
                               "typeIdentifier": "t_bytes32",
                               "typeString": "bytes32"
                             },
-                            "id": 366,
+                            "id": 453,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -9876,24 +9876,24 @@
                                     {
                                       "expression": {
                                         "baseExpression": {
-                                          "id": 354,
+                                          "id": 441,
                                           "name": "sales",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 274,
+                                          "referencedDeclaration": 361,
                                           "src": "965:5:2",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_array$_t_struct$_Sale_$270_storage_$dyn_storage",
+                                            "typeIdentifier": "t_array$_t_struct$_Sale_$357_storage_$dyn_storage",
                                             "typeString": "struct SalesRegistry.Sale storage ref[] storage ref"
                                           }
                                         },
-                                        "id": 356,
+                                        "id": 443,
                                         "indexExpression": {
-                                          "id": 355,
+                                          "id": 442,
                                           "name": "i",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 341,
+                                          "referencedDeclaration": 428,
                                           "src": "971:1:2",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_uint256",
@@ -9907,11 +9907,11 @@
                                         "nodeType": "IndexAccess",
                                         "src": "965:8:2",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_struct$_Sale_$270_storage",
+                                          "typeIdentifier": "t_struct$_Sale_$357_storage",
                                           "typeString": "struct SalesRegistry.Sale storage ref"
                                         }
                                       },
-                                      "id": 357,
+                                      "id": 444,
                                       "isConstant": false,
                                       "isLValue": true,
                                       "isPure": false,
@@ -9919,7 +9919,7 @@
                                       "memberLocation": "974:10:2",
                                       "memberName": "sellerCode",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 267,
+                                      "referencedDeclaration": 354,
                                       "src": "965:19:2",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_string_storage",
@@ -9934,7 +9934,7 @@
                                         "typeString": "string storage ref"
                                       }
                                     ],
-                                    "id": 353,
+                                    "id": 440,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
@@ -9946,14 +9946,14 @@
                                       "typeString": "type(bytes storage pointer)"
                                     },
                                     "typeName": {
-                                      "id": 352,
+                                      "id": 439,
                                       "name": "bytes",
                                       "nodeType": "ElementaryTypeName",
                                       "src": "959:5:2",
                                       "typeDescriptions": {}
                                     }
                                   },
-                                  "id": 358,
+                                  "id": 445,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -9977,7 +9977,7 @@
                                     "typeString": "bytes storage pointer"
                                   }
                                 ],
-                                "id": 351,
+                                "id": 438,
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -9988,7 +9988,7 @@
                                   "typeString": "function (bytes memory) pure returns (bytes32)"
                                 }
                               },
-                              "id": 359,
+                              "id": 446,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -10011,11 +10011,11 @@
                                 {
                                   "arguments": [
                                     {
-                                      "id": 363,
+                                      "id": 450,
                                       "name": "_sellerCode",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 333,
+                                      "referencedDeclaration": 420,
                                       "src": "1006:11:2",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_string_memory_ptr",
@@ -10030,7 +10030,7 @@
                                         "typeString": "string memory"
                                       }
                                     ],
-                                    "id": 362,
+                                    "id": 449,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
@@ -10042,14 +10042,14 @@
                                       "typeString": "type(bytes storage pointer)"
                                     },
                                     "typeName": {
-                                      "id": 361,
+                                      "id": 448,
                                       "name": "bytes",
                                       "nodeType": "ElementaryTypeName",
                                       "src": "1000:5:2",
                                       "typeDescriptions": {}
                                     }
                                   },
-                                  "id": 364,
+                                  "id": 451,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -10073,7 +10073,7 @@
                                     "typeString": "bytes memory"
                                   }
                                 ],
-                                "id": 360,
+                                "id": 447,
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -10084,7 +10084,7 @@
                                   "typeString": "function (bytes memory) pure returns (bytes32)"
                                 }
                               },
-                              "id": 365,
+                              "id": 452,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -10113,7 +10113,7 @@
                               "typeIdentifier": "t_bytes32",
                               "typeString": "bytes32"
                             },
-                            "id": 382,
+                            "id": 469,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -10125,24 +10125,24 @@
                                     {
                                       "expression": {
                                         "baseExpression": {
-                                          "id": 370,
+                                          "id": 457,
                                           "name": "sales",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 274,
+                                          "referencedDeclaration": 361,
                                           "src": "1056:5:2",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_array$_t_struct$_Sale_$270_storage_$dyn_storage",
+                                            "typeIdentifier": "t_array$_t_struct$_Sale_$357_storage_$dyn_storage",
                                             "typeString": "struct SalesRegistry.Sale storage ref[] storage ref"
                                           }
                                         },
-                                        "id": 372,
+                                        "id": 459,
                                         "indexExpression": {
-                                          "id": 371,
+                                          "id": 458,
                                           "name": "i",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 341,
+                                          "referencedDeclaration": 428,
                                           "src": "1062:1:2",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_uint256",
@@ -10156,11 +10156,11 @@
                                         "nodeType": "IndexAccess",
                                         "src": "1056:8:2",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_struct$_Sale_$270_storage",
+                                          "typeIdentifier": "t_struct$_Sale_$357_storage",
                                           "typeString": "struct SalesRegistry.Sale storage ref"
                                         }
                                       },
-                                      "id": 373,
+                                      "id": 460,
                                       "isConstant": false,
                                       "isLValue": true,
                                       "isPure": false,
@@ -10168,7 +10168,7 @@
                                       "memberLocation": "1065:9:2",
                                       "memberName": "productSN",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 269,
+                                      "referencedDeclaration": 356,
                                       "src": "1056:18:2",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_string_storage",
@@ -10183,7 +10183,7 @@
                                         "typeString": "string storage ref"
                                       }
                                     ],
-                                    "id": 369,
+                                    "id": 456,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
@@ -10195,14 +10195,14 @@
                                       "typeString": "type(bytes storage pointer)"
                                     },
                                     "typeName": {
-                                      "id": 368,
+                                      "id": 455,
                                       "name": "bytes",
                                       "nodeType": "ElementaryTypeName",
                                       "src": "1050:5:2",
                                       "typeDescriptions": {}
                                     }
                                   },
-                                  "id": 374,
+                                  "id": 461,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -10226,7 +10226,7 @@
                                     "typeString": "bytes storage pointer"
                                   }
                                 ],
-                                "id": 367,
+                                "id": 454,
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -10237,7 +10237,7 @@
                                   "typeString": "function (bytes memory) pure returns (bytes32)"
                                 }
                               },
-                              "id": 375,
+                              "id": 462,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -10260,11 +10260,11 @@
                                 {
                                   "arguments": [
                                     {
-                                      "id": 379,
+                                      "id": 466,
                                       "name": "_productSN",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 335,
+                                      "referencedDeclaration": 422,
                                       "src": "1096:10:2",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_string_memory_ptr",
@@ -10279,7 +10279,7 @@
                                         "typeString": "string memory"
                                       }
                                     ],
-                                    "id": 378,
+                                    "id": 465,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
@@ -10291,14 +10291,14 @@
                                       "typeString": "type(bytes storage pointer)"
                                     },
                                     "typeName": {
-                                      "id": 377,
+                                      "id": 464,
                                       "name": "bytes",
                                       "nodeType": "ElementaryTypeName",
                                       "src": "1090:5:2",
                                       "typeDescriptions": {}
                                     }
                                   },
-                                  "id": 380,
+                                  "id": 467,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -10322,7 +10322,7 @@
                                     "typeString": "bytes memory"
                                   }
                                 ],
-                                "id": 376,
+                                "id": 463,
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -10333,7 +10333,7 @@
                                   "typeString": "function (bytes memory) pure returns (bytes32)"
                                 }
                               },
-                              "id": 381,
+                              "id": 468,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -10361,18 +10361,18 @@
                             "typeString": "bool"
                           }
                         },
-                        "id": 387,
+                        "id": 474,
                         "nodeType": "IfStatement",
                         "src": "927:243:2",
                         "trueBody": {
-                          "id": 386,
+                          "id": 473,
                           "nodeType": "Block",
                           "src": "1124:46:2",
                           "statements": [
                             {
                               "expression": {
                                 "hexValue": "74727565",
-                                "id": 384,
+                                "id": 471,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -10386,8 +10386,8 @@
                                 },
                                 "value": "true"
                               },
-                              "functionReturnParameters": 339,
-                              "id": 385,
+                              "functionReturnParameters": 426,
+                              "id": 472,
                               "nodeType": "Return",
                               "src": "1143:11:2"
                             }
@@ -10401,17 +10401,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 347,
+                    "id": 434,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 344,
+                      "id": 431,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 341,
+                      "referencedDeclaration": 428,
                       "src": "889:1:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -10422,18 +10422,18 @@
                     "operator": "<",
                     "rightExpression": {
                       "expression": {
-                        "id": 345,
+                        "id": 432,
                         "name": "sales",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 274,
+                        "referencedDeclaration": 361,
                         "src": "893:5:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Sale_$270_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Sale_$357_storage_$dyn_storage",
                           "typeString": "struct SalesRegistry.Sale storage ref[] storage ref"
                         }
                       },
-                      "id": 346,
+                      "id": 433,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -10453,20 +10453,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 389,
+                  "id": 476,
                   "initializationExpression": {
                     "assignments": [
-                      341
+                      428
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 341,
+                        "id": 428,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "882:1:2",
                         "nodeType": "VariableDeclaration",
-                        "scope": 389,
+                        "scope": 476,
                         "src": "877:6:2",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -10475,7 +10475,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 340,
+                          "id": 427,
                           "name": "uint",
                           "nodeType": "ElementaryTypeName",
                           "src": "877:4:2",
@@ -10487,10 +10487,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 343,
+                    "id": 430,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 342,
+                      "id": 429,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -10509,7 +10509,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 349,
+                      "id": 436,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -10519,11 +10519,11 @@
                       "prefix": false,
                       "src": "907:3:2",
                       "subExpression": {
-                        "id": 348,
+                        "id": 435,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 341,
+                        "referencedDeclaration": 428,
                         "src": "907:1:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -10535,7 +10535,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 350,
+                    "id": 437,
                     "nodeType": "ExpressionStatement",
                     "src": "907:3:2"
                   },
@@ -10545,7 +10545,7 @@
                 {
                   "expression": {
                     "hexValue": "66616c7365",
-                    "id": 390,
+                    "id": 477,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -10559,15 +10559,15 @@
                     },
                     "value": "false"
                   },
-                  "functionReturnParameters": 339,
-                  "id": 391,
+                  "functionReturnParameters": 426,
+                  "id": 478,
                   "nodeType": "Return",
                   "src": "1191:12:2"
                 }
               ]
             },
             "functionSelector": "bc804353",
-            "id": 393,
+            "id": 480,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -10575,17 +10575,17 @@
             "nameLocation": "770:10:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 336,
+              "id": 423,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 333,
+                  "id": 420,
                   "mutability": "mutable",
                   "name": "_sellerCode",
                   "nameLocation": "795:11:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 393,
+                  "scope": 480,
                   "src": "781:25:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -10594,7 +10594,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 332,
+                    "id": 419,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "781:6:2",
@@ -10607,12 +10607,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 335,
+                  "id": 422,
                   "mutability": "mutable",
                   "name": "_productSN",
                   "nameLocation": "822:10:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 393,
+                  "scope": 480,
                   "src": "808:24:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -10621,7 +10621,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 334,
+                    "id": 421,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "808:6:2",
@@ -10636,17 +10636,17 @@
               "src": "780:53:2"
             },
             "returnParameters": {
-              "id": 339,
+              "id": 426,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 338,
+                  "id": 425,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 393,
+                  "scope": 480,
                   "src": "855:4:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10655,7 +10655,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 337,
+                    "id": 424,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "855:4:2",
@@ -10669,14 +10669,14 @@
               ],
               "src": "854:6:2"
             },
-            "scope": 394,
+            "scope": 481,
             "src": "761:450:2",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 395,
+        "scope": 482,
         "src": "60:1154:2",
         "usedErrors": [],
         "usedEvents": []
@@ -10704,12 +10704,18 @@
     "1744484558135": {
       "events": {},
       "links": {},
-      "address": "0x72b6611f81D2297f2057aA9fb59b4eb04Ae7C8ef",
-      "transactionHash": "0x1599763139eadbc6922baaecf3b211770b7970e33cd63c6ee782ac4d4f040c29"
+      "address": "0x5eC2a5cEed5fAf172485978C115ED8417Be8f36e",
+      "transactionHash": "0x3b9ef049a4278b6b9bba93b516cbbfca13b182bf86366bba6cb0c5ebcd6af5bc"
+    },
+    "1744534368473": {
+      "events": {},
+      "links": {},
+      "address": "0x08b273f04aa108b501C98E1976976D83FDC90Fc5",
+      "transactionHash": "0x49e5bb64f4cace2c99c8079ad2b14c9ec7d4ba7a6602acabfc50d86c08145e6d"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2025-04-12T19:39:24.060Z",
+  "updatedAt": "2025-04-13T10:08:58.473Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

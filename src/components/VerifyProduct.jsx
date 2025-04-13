@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Web3 from "web3";
-import ProductSaleRegistry from "../contracts/ProductSaleRegistry.json"; // Import ProductSaleRegistry ABI
+import ProductSaleRegistry from "../contracts/ProductSaleRegistry.json"; 
 import { Html5QrcodeScanner } from "html5-qrcode";
 import "../styles/VerifyProduct.css";
 
@@ -23,7 +23,7 @@ const VerifyProduct = () => {
   const web3 = new Web3(window.ethereum);
   const contract = new web3.eth.Contract(
     ProductSaleRegistry.abi,
-    "0x5B826c60F90110D58665d57Eb6C7DE44323385Be" // Deployed ProductSaleRegistry contract address
+    "0xB2B66b3c3cc06DF1e919e9d6320d927d5FDdf1cC" // Deployed ProductSaleRegistry contract address
   );
 
   useEffect(() => {

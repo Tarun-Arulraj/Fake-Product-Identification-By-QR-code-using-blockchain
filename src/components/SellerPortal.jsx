@@ -65,12 +65,12 @@ const SellerPortal = () => {
 
       const productContract = new web3.eth.Contract(
         ProductRegistry.abi,
-        '0x392602A14d90Abdedd93cd1a18892f7F5A466674' // Your ProductRegistry address
+        '0xA38E5b4D68E3716291fe1Bfa84ec7336d780F6B7' // Your ProductRegistry address
       );
 
       const saleContract = new web3.eth.Contract(
         SaleRegistry.abi,
-        '0x5B826c60F90110D58665d57Eb6C7DE44323385Be' // Replace with ProductSaleRegistry address
+        '0xB2B66b3c3cc06DF1e919e9d6320d927d5FDdf1cC' // Replace with ProductSaleRegistry address
       );
 
       // Check if product exists
