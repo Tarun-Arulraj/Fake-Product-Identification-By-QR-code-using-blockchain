@@ -11331,12 +11331,12 @@
     "1744534368473": {
       "events": {},
       "links": {},
-      "address": "0xB2B66b3c3cc06DF1e919e9d6320d927d5FDdf1cC",
-      "transactionHash": "0x0b54603f7a77642b5003935850a4cc0aae2b7e0522bc0f20b5bbc250f42da791"
+      "address": "0x48C0476901D532C44DD4b6DC43347C09E2f53780",
+      "transactionHash": "0xe51d19e20015982b2028d3cc0f6a679226abd34e08143d163838d122f861ec53"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2025-04-13T10:08:58.481Z",
+  "updatedAt": "2025-04-13T13:25:05.234Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

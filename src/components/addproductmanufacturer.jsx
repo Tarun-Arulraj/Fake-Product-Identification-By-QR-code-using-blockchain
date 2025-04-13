@@ -34,7 +34,7 @@ const AddProductManufacturer = () => {
   
       const contract = new web3.eth.Contract(
         ProductRegistry.abi,
-        '0xA38E5b4D68E3716291fe1Bfa84ec7336d780F6B7' //DEPLOYED ProductRegistry contract address
+        '0x28d447234db0B220d5D8Fc126Fe4325038ccb7eE' //DEPLOYED ProductRegistry contract address
       );
   
       const { manufacturerID, productName, productSN, productBrand, productPrice } = formData;

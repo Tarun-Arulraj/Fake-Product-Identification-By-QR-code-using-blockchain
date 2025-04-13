@@ -23,7 +23,7 @@ const VerifyProduct = () => {
   const web3 = new Web3(window.ethereum);
   const contract = new web3.eth.Contract(
     ProductSaleRegistry.abi,
-    "0xB2B66b3c3cc06DF1e919e9d6320d927d5FDdf1cC" // Deployed ProductSaleRegistry contract address
+    "0x48C0476901D532C44DD4b6DC43347C09E2f53780" // Deployed ProductSaleRegistry contract address
   );
 
   useEffect(() => {

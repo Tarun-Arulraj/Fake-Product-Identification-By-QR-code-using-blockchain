@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom';
 import Web3 from 'web3';
 import ProductSaleRegistry from '../contracts/ProductSaleRegistry.json';
 import ProductRegistry from '../contracts/ProductRegistry.json';
+import SellerRegistry from '../contracts/SellerRegistry.json';
 import '../styles/purchasehistory.css';
 
 const PurchaseHistory = () => {
   const [transactions, setTransactions] = useState([]);
   const [isMenuActive, setIsMenuActive] = useState(false);
-
   const toggleMenu = () => setIsMenuActive(!isMenuActive);
 
-  const saleRegistryAddress = '0xB2B66b3c3cc06DF1e919e9d6320d927d5FDdf1cC';
-  const productRegistryAddress = '0xA38E5b4D68E3716291fe1Bfa84ec7336d780F6B7';
+  const saleRegistryAddress = '0x48C0476901D532C44DD4b6DC43347C09E2f53780';  //productSaleRegistry address
+  const productRegistryAddress = '0x28d447234db0B220d5D8Fc126Fe4325038ccb7eE';  //productRegistry address
+  const sellerRegistryAddress = '0xB5eA6D3cEa3cD0d5F66665d1b777C248e048641E';  //sellerRegistry address
 
-  const sampleSerials = ['1', '2', 'SN003'];  // Replace with serials you want to check.
+  const sampleSerials = ['1', '2', 'SN003'];
 
   useEffect(() => {
     const fetchTransactionData = async () => {
@@ -29,11 +30,23 @@ const PurchaseHistory = () => {
 
         const saleContract = new web3.eth.Contract(ProductSaleRegistry.abi, saleRegistryAddress);
         const productContract = new web3.eth.Contract(ProductRegistry.abi, productRegistryAddress);
+        const sellerContract = new web3.eth.Contract(SellerRegistry.abi, sellerRegistryAddress);
 
         const detailedTransactions = await Promise.all(
           sampleSerials.map(async (serial) => {
             const product = await productContract.methods.getProduct(serial).call();
             const sale = await saleContract.methods.getSale(serial).call();
+
+            let sellerName = 'N/A';
+            if (sale.exists) {
+              try {
+                // Assuming sale.seller is actually a code (if not, you should store the code in sale during sale registration!)
+                const sellerData = await sellerContract.methods.getSellerByCode(sale.seller).call();
+                sellerName = sellerData[0];  // Name is the first returned field.
+              } catch (err) {
+                console.warn(`Could not fetch seller name for code: ${sale.seller}`);
+              }
+            }
 
             return {
               serialNumber: serial,
@@ -42,7 +55,7 @@ const PurchaseHistory = () => {
               price: product[4],
               manufacturerID: product[0],
               status: sale.exists ? 'completed' : 'available',
-              seller: sale.exists ? sale.seller : 'N/A',
+              seller: sellerName,
               buyer: sale.exists ? sale.buyer : 'N/A',
               date: sale.exists ? sale.date : 'N/A'
             };

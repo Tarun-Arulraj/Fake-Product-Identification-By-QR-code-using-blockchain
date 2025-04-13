@@ -28,15 +28,15 @@ const QueryProducts = () => {
 
       const sellerRegistry = new web3.eth.Contract(
         SellerRegistryABI.abi,
-        "0xe3af6F1100E2f07E6132c5cE6CECf519f72CC0A7"                            // Replace with your SellerRegistry address
+        "0xB5eA6D3cEa3cD0d5F66665d1b777C248e048641E"                            // Replace with your SellerRegistry address
       );
       const productRegistry = new web3.eth.Contract(
         ProductRegistryABI.abi,
-        "0xA38E5b4D68E3716291fe1Bfa84ec7336d780F6B7"                           // Replace with your ProductRegistry address
+        "0x28d447234db0B220d5D8Fc126Fe4325038ccb7eE"                           // Replace with your ProductRegistry address
       );
       const productSaleRegistry = new web3.eth.Contract(
         ProductSaleRegistryABI.abi,
-        "0xB2B66b3c3cc06DF1e919e9d6320d927d5FDdf1cC"                      // Replace with your ProductSaleRegistry address
+        "0x48C0476901D532C44DD4b6DC43347C09E2f53780"                      // Replace with your ProductSaleRegistry address
       );
 
       const seller = await sellerRegistry.methods.getSellerByCode(sellerCode).call();
