@@ -35,7 +35,7 @@ const Consumer = () => {
 
       {/* Hero Section */}
       <section className="hero">
-        <h1>Consumer Portal</h1>
+        <p id="head">Consumer Portal</p>
         <p>Verify product authenticity and view your purchase history securely using blockchain technology</p>
       </section>
 

@@ -101,11 +101,13 @@
     transform: skewY(-4deg);
   }
   
-  .hero h1 {
+  .hero #head {
     font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    animation: fadeInUp 1s ease;
+    animation: fadeInUp 1s ease 0.2s forwards;
+    visibility: visible;
   }
   
   .hero p {

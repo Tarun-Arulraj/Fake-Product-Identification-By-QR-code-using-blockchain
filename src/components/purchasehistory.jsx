@@ -11,9 +11,9 @@ const PurchaseHistory = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const toggleMenu = () => setIsMenuActive(!isMenuActive);
 
-  const saleRegistryAddress = '0x48C0476901D532C44DD4b6DC43347C09E2f53780';  //productSaleRegistry address
-  const productRegistryAddress = '0x28d447234db0B220d5D8Fc126Fe4325038ccb7eE';  //productRegistry address
-  const sellerRegistryAddress = '0xB5eA6D3cEa3cD0d5F66665d1b777C248e048641E';  //sellerRegistry address
+  const saleRegistryAddress = '0x66BE04222116520a1218B649A20E887B6D96d9e2';  //productSaleRegistry address
+  const productRegistryAddress = '0x4766fBD378cE15D22AA4f0C425a2804543787caf';  //productRegistry address
+  const sellerRegistryAddress = '0xC8182514889D9462C65a5A7584485D59cC09BEb1';  //sellerRegistry address
 
   const sampleSerials = ['1', '2', 'SN003'];
 

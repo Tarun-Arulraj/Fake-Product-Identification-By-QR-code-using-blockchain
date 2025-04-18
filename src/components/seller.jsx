@@ -36,7 +36,7 @@ const SellerPortal = () => {
 
       {/* Hero Section */}
       <section className="hero">
-        <h1>Seller Portal</h1>
+        <p id="head">Seller Portal</p>
         <p>Manage your product sales and inventory through blockchain technology</p>
       </section>
 

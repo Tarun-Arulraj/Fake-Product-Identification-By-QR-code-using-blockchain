@@ -36,7 +36,7 @@ const Manufacturer = () => {
 
       {/* Hero Section */}
       <section className="hero">
-        <h1>Manufacturer Portal</h1>
+        <p id="head">Manufacturer Portal</p>
         <p>Manage your products, sellers, and transactions securely using blockchain technology.</p>
       </section>
 

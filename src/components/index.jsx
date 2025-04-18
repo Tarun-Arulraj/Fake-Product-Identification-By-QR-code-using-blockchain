@@ -35,7 +35,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="hero">
-        <h1>Blockchain-Powered Product Authentication</h1>
+        <p id="head">Blockchain-Powered Product Authentication</p>
         <p>Secure your supply chain and verify product authenticity using decentralized blockchain technology</p>
         <a href="/manufacturer" className="cta-button">
           About Us
