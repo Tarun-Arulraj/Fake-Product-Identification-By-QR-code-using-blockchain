@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 🔒 Fake Product Identification by QR Code Using Blockchain
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project presents a blockchain-based system for identifying fake products using QR codes. By registering products on a blockchain platform and generating unique QR codes, the system enables consumers to verify product authenticity. Smart contracts automate the verification process, detecting counterfeit products and alerting stakeholders. This decentralized, tamper-proof system promotes transparency, trust, and security in the supply chain.
 
-## Available Scripts
+## 📌 Features
 
-In the project directory, you can run:
+- **Manufacturer Registration**: Register manufacturers with unique identification codes.
+- **Product Registration**: Manufacturers can register products, each assigned a unique serial number and QR code.
+- **Seller Registration**: Register sellers who can access product inventories.
+- **Product Sale Recording**: Record the sale of products from manufacturers to sellers.
+- **Inventory Querying**: Sellers can query their inventory to view product details and sale status.
+- **QR Code Scanning**: Consumers can scan QR codes to verify product authenticity.
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js
+- **Blockchain**: Ethereum, Solidity
+- **Smart Contracts**:
+  - `SellerRegistry.sol`
+  - `ProductRegistry.sol`
+  - `ProductSaleRegistry.sol`
+- **Web3 Integration**: Web3.js
+- **QR Code Scanning**: html5-qrcode
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/)
+- [MetaMask](https://metamask.io/) browser extension
+- [Ganache](https://trufflesuite.com/ganache/) for local blockchain development
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/Tarun-Arulraj/Fake-Product-Identification-By-QR-code-using-blockchain.git
+   cd Fake-Product-Identification-By-QR-code-using-blockchain
+   
+### Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
 
-### `npm run eject`
+### Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application will run at http://localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Blockchain Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Navigate to the blockchain directory:
 
-## Learn More
+cd supplychain-blockchain
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Install Truffle globally (if not already installed):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm install -g truffle
 
-### Code Splitting
+### Compile smart contracts:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+truffle compile
 
-### Analyzing the Bundle Size
+### Deploy smart contracts to Ganache:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Ensure Ganache is running.
 
-### Making a Progressive Web App
+### In a new terminal, deploy contracts:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+truffle migrate
 
-### Advanced Configuration
+### Connect MetaMask to Ganache:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Open MetaMask.
 
-### Deployment
+Add a new network with the following details:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Network Name: Ganache
 
-### `npm run build` fails to minify
+New RPC URL: http://127.0.0.1:7545
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Chain ID: 1337
+
+Import an account from Ganache using its private key.
+
+### 🤝 Contact
+
+For any inquiries or support, please contact:
+
+Email: tarunarulraj23@gmail.com
