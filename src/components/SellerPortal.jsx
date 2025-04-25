@@ -65,12 +65,12 @@ const SellerPortal = () => {
 
       const productContract = new web3.eth.Contract(
         ProductRegistry.abi,
-        '0x4766fBD378cE15D22AA4f0C425a2804543787caf' // Your ProductRegistry address
+        '0xa4f6Bc6E0126dC7C18C33f644979C497De123A7d' // Your ProductRegistry address
       );
 
       const saleContract = new web3.eth.Contract(
         SaleRegistry.abi,
-        '0x66BE04222116520a1218B649A20E887B6D96d9e2' // Replace with ProductSaleRegistry address
+        '0xa7a137AE72e51CB495FE38CeF8879Bb2A467B80e' // Replace with ProductSaleRegistry address
       );
 
       // Check if product exists
@@ -143,7 +143,7 @@ const SellerPortal = () => {
                 />
               </div>
               <div className="input-wrapper">
-                <label htmlFor="consumerCode">Consumer Code</label>
+                <label htmlFor="consumerCode">Specify Consumer Code</label>
                 <input
                   type="text"
                   id="consumerCode"

@@ -76,8 +76,8 @@ const SellProductManufacturer = () => {
           await window.ethereum.request({ method: "eth_requestAccounts" });
           const accounts = await web3.eth.getAccounts();
       
-          const sellerRegistry = new web3.eth.Contract(SellerRegistry.abi, '0xC8182514889D9462C65a5A7584485D59cC09BEb1');  //DEPLOYED SellerRegistry contract address
-          const productRegistry = new web3.eth.Contract(ProductRegistry.abi, '0x4766fBD378cE15D22AA4f0C425a2804543787caf');  //DEPLOYED ProductRegistry contract address
+          const sellerRegistry = new web3.eth.Contract(SellerRegistry.abi, '0xE376c109c702F14eA404fc3904C44B4a7b9981C1');  //DEPLOYED SellerRegistry contract address
+          const productRegistry = new web3.eth.Contract(ProductRegistry.abi, '0xa4f6Bc6E0126dC7C18C33f644979C497De123A7d');  //DEPLOYED ProductRegistry contract address
       
           const productExists = await productRegistry.methods.productExists(productSN).call();
           const sellerExists = await sellerRegistry.methods.sellerExists(sellerCode).call();
@@ -93,7 +93,7 @@ const SellProductManufacturer = () => {
           }
 
           // ✅ Record sale on blockchain
-        const salesRegistry = new web3.eth.Contract(SalesRegistry.abi, '0x5d2611cFFb9E3F6EB1B37F7CF5782a7dBcC67241');  //DEPLOYED SalesRegistry contract address
+        const salesRegistry = new web3.eth.Contract(SalesRegistry.abi, '0x2A0236b49576B49604695F2E04e028899933Ddeb');  //DEPLOYED SalesRegistry contract address
         await salesRegistry.methods.recordSale(sellerCode, productSN).send({ from: accounts[0] });
       
           alert("✅ Product sold successfully!");

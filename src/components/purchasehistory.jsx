@@ -11,11 +11,11 @@ const PurchaseHistory = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const toggleMenu = () => setIsMenuActive(!isMenuActive);
 
-  const saleRegistryAddress = '0x66BE04222116520a1218B649A20E887B6D96d9e2';  //productSaleRegistry address
-  const productRegistryAddress = '0x4766fBD378cE15D22AA4f0C425a2804543787caf';  //productRegistry address
-  const sellerRegistryAddress = '0xC8182514889D9462C65a5A7584485D59cC09BEb1';  //sellerRegistry address
+  const saleRegistryAddress = '0xa7a137AE72e51CB495FE38CeF8879Bb2A467B80e';  //productSaleRegistry address
+  const productRegistryAddress = '0xa4f6Bc6E0126dC7C18C33f644979C497De123A7d';  //productRegistry address
+  const sellerRegistryAddress = '0xE376c109c702F14eA404fc3904C44B4a7b9981C1';  //sellerRegistry address
 
-  const sampleSerials = ['1', '2', 'SN003'];
+  const sampleSerials = ['1', '2', '3'];
 
   useEffect(() => {
     const fetchTransactionData = async () => {
